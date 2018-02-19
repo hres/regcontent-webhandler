@@ -180,7 +180,7 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                             <div><strong>Post-Authorization Activity Table (PAAT)</strong></div>
                                 <table id="paat" class="wb-tables table-striped table-hover table-bordered">
                                     <thead>
-                                        <tr>
+                                        <tr class="row">
                                             <th>RowNum</th>
                                             <th class="col-sm-2">Activity/submission type, control number</th>
                                             <th class="col-sm-2">Date submitted</th>
@@ -249,19 +249,34 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                             </details>
                             <details class="margin-top-medium"  id="AClinBasisHeader" open>
                                 <summary class="well well-sm">7 What was the scientific rationale for Health Canada's decision?</summary>
-                                <div>
+                                <div id="template2a">
                                     <details class="margin-top-medium" id="AClinBasisTitle">
                                         <summary class="well well-sm" >7.1 Clinical basis for decision</summary>
-                                        <p id="AClinBasis"></p>
+                                        <p id="AClinBasis1"></p>
                                     </details>
                                     <details  id="ANonClinBasisTitle">
                                         <summary>7.2 Non-clinical basis for decision</summary>
-                                        <p id="ANonClinBasis"></p>
+                                        <p id="ANonClinBasis1"></p>
                                     </details>
                                     <details id="BQualityBasisTitle">
                                         <summary class="well well-sm">7.3 Quality basis for decision</summary>
-                                        <p id="BQualityBasis"></p>
+                                        <p id="BQualityBasis1"></p>
                                     </details>
+                                </div>
+                                <div id="template2b">
+                                    <details id="BQualityBasisTitle">
+                                        <summary class="well well-sm">7.1 Quality basis for decision</summary>
+                                        <p id="BQualityBasis2"></p>
+                                    </details>
+                                    <details id="ANonClinBasisTitle">
+                                        <summary>7.2 Non-clinical basis for decision</summary>
+                                        <p id="ANonClinBasis2"></p>
+                                    </details>
+                                    <details class="margin-top-medium" id="AClinBasisTitle">
+                                        <summary class="well well-sm">7.3 Clinical basis for decision</summary>
+                                        <p id="AClinBasis2"></p>
+                                    </details>                                 
+                                   
                                 </div>
                             </details>
 </div>
@@ -435,9 +450,9 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                     $('#StepsApproval').append(json.steps_approval);
                     $('#PostAuth').append(json.post_auth);
                     $('#OtherInfo').append(json.other_info);
-                    $('#BQualityBasis').append(json.b_quality_basis);
-                    $('#ANonClinBasis').append(formatedClinBasisDesc(json.a_non_clin_basis, json.a_non_clin_basis2, ""));
-                    $('#AClinBasis').append(formatedClinBasisDesc(json.a_clin_basis, json.a_clin_basis2, ""));
+                    //$('#BQualityBasis').append(json.b_quality_basis);
+                    //$('#ANonClinBasis').append(formatedClinBasisDesc(json.a_non_clin_basis, json.a_non_clin_basis2, ""));
+                    //$('#AClinBasis').append(formatedClinBasisDesc(json.a_clin_basis, json.a_clin_basis2, ""));
                     $('#MilestoneTable').append(displayMilestoneList(json.milestone_list));
                     $('#DinList').append(formatedList(json.din_list));
                     $('#AssessBasis').append(json.assess_basis);                   
@@ -445,6 +460,22 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                     $('#MedIngredient2').append(json.med_ingredient);
                     $('#summary_drug').append(json.summary_drug);
                     $('#paat_info').append(json.paat_info);
+                    if (json.ai_str_route_summary == 'biosimilar') {
+                        $('#template2a').hide();
+                        $('#template2b').show();
+                        $('#BQualityBasis2').append(json.b_quality_basis);
+                        $('#ANonClinBasis2').append(formatedClinBasisDesc(json.a_non_clin_basis, json.a_non_clin_basis2, ""));
+                        $('#AClinBasis2').append(formatedClinBasisDesc(json.a_clin_basis, json.a_clin_basis2, ""));                      
+
+                    }
+                    else {
+                        $('#template2a').show();
+                        $('#template2b').hide();
+                        $('#BQualityBasis1').append(json.b_quality_basis);
+                        $('#ANonClinBasis1').append(formatedClinBasisDesc(json.a_non_clin_basis, json.a_non_clin_basis2, ""));
+                        $('#AClinBasis1').append(formatedClinBasisDesc(json.a_clin_basis, json.a_clin_basis2, ""));
+                        
+                    }
 
                 }
             },         

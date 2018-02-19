@@ -185,6 +185,8 @@ namespace dhpr
         public string branch_info { get; set; }
         public string trademark { get; set; }
         public string paat_info { get; set; }
+        public string ai_str_route_summary { get; set; }
+
         //public string strength { get; set; }
         //public string dosage_form { get; set; }
         //public string route_admin { get; set; }
