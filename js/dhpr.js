@@ -1,5 +1,5 @@
 ﻿
-var dhpr = "http://imsd.hres.ca/dhpr/controller/dhprController.ashx?";
+var dhpr = "https://health-products-dev.hres.ca/api/dhpr/controller/dhprController.ashx?";
 //var dhpr = "./controller/dhprController.ashx?";
 
 $("summary").addClass("wb-toggle well well-sm");
