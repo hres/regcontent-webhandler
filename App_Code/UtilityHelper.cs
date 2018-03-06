@@ -39,8 +39,8 @@ namespace dhpr
             var filteredList = new List<rdsSearchItem>();
             var json = string.Empty;           
             var rdsJsonUrl = ConfigurationManager.AppSettings["rdsJsonUrl"].ToString();
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //ServicePointManager.Expect100Continue = true;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
                 using (var webClient = new System.Net.WebClient())
@@ -119,8 +119,8 @@ namespace dhpr
             var json = string.Empty;
             var postData = new Dictionary<string, string>();
             var rdsJsonUrlbyID = string.Format("{0}&id={1}&lang={2}", ConfigurationManager.AppSettings["rdsJsonUrl"].ToString(), rdsID, lang);
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //ServicePointManager.Expect100Continue = true;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
                 using (var webClient = new System.Net.WebClient())
@@ -151,8 +151,8 @@ namespace dhpr
             var json = string.Empty;
             var postData = new Dictionary<string, string>();
             var rdsJsonUrlbyID = string.Format("{0}&id={1}&lang={2}", ConfigurationManager.AppSettings["rdsmdJsonUrl"].ToString(), rdsID, lang);
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //ServicePointManager.Expect100Continue = true;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
                 using (var webClient = new System.Net.WebClient())
@@ -184,8 +184,8 @@ namespace dhpr
             var json = string.Empty;
             // var postData = new Dictionary<string, string>();
             var ssrJsonUrl = ConfigurationManager.AppSettings["ssrJsonUrl"].ToString();
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //ServicePointManager.Expect100Continue = true;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             try
             {
@@ -241,8 +241,8 @@ namespace dhpr
             var json = string.Empty;
             var postData = new Dictionary<string, string>();
             var ssrJsonUrlbyID = string.Format("{0}&id={1}&lang={2}", ConfigurationManager.AppSettings["ssrJsonUrl"].ToString(), ssrID, lang);
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //ServicePointManager.Expect100Continue = true;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
                 using (var webClient = new System.Net.WebClient())
@@ -273,8 +273,8 @@ namespace dhpr
             var json = string.Empty;
             var postData = new Dictionary<string, string>();
             var sbdJsonUrlbyID = string.Format("{0}&id={1}&lang={2}", ConfigurationManager.AppSettings["sbdJsonUrl"].ToString(), sbdID, lang);
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //ServicePointManager.Expect100Continue = true;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
                 using (var webClient = new System.Net.WebClient())
@@ -306,8 +306,8 @@ namespace dhpr
             var json = string.Empty;
             var postData = new Dictionary<string, string>();
             var sbdmdJsonUrlbyID = string.Format("{0}&id={1}&lang={2}", ConfigurationManager.AppSettings["sbdmdJsonUrl"].ToString(), sbdID, lang);
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //ServicePointManager.Expect100Continue = true;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
                 using (var webClient = new System.Net.WebClient())
@@ -338,8 +338,8 @@ namespace dhpr
             var filteredList = new List<sbdSearchItem>();
             var json = string.Empty;
             var sbdJsonUrl = ConfigurationManager.AppSettings["sbdJsonUrl"].ToString();
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //ServicePointManager.Expect100Continue = true;
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
                 using (var webClient = new System.Net.WebClient())
