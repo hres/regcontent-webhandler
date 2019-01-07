@@ -1,6 +1,6 @@
 ﻿
-//var dhpr = "https://health-products-dev.hres.ca/api/dhpr/controller/dhprController.ashx?";
-var dhpr = "./controller/dhprController.ashx?";
+var dhpr = "https://health-products-dev.hres.ca/api/dhpr/controller/dhprController.ashx?";
+//var dhpr = "./controller/dhprController.ashx?";
 
 $("summary").addClass("wb-toggle well well-sm");
 $("summary").attr("data-toggle", "{\"persist\": \"session\"}");
