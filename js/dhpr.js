@@ -1,6 +1,6 @@
 ﻿
-var dhpr = "https://health-products-dev.hres.ca/api/dhpr/controller/dhprController.ashx?";
-//var dhpr = "./controller/dhprController.ashx?";
+//var dhpr = "https://health-products-dev.hres.ca/api/dhpr/controller/dhprController.ashx?";
+var dhpr = "./controller/dhprController.ashx?";
 
 $("summary").addClass("wb-toggle well well-sm");
 $("summary").attr("data-toggle", "{\"persist\": \"session\"}");
@@ -179,8 +179,15 @@ function displayMilestoneList(data) {
     var txt = "";
     var i;
     for (i = 0; i < data.length; i++) {
+        var str = data[i].milestone;
+        if (str.startsWith("<b>") || str.startsWith("<strong>")) {
+            txt += "<tr class='active'><td>" + (data[i].milestone) + "</td>";
+            txt += "<td>" + formatedDate(data[i].completed_date);
+        }
+        else {        
         txt += "<tr><td>" + (data[i].milestone) + "</td>";
         txt += "<td>" + formatedDate(data[i].completed_date);
+        }
         if ($.trim(data[i].separator) != '') {
             txt += " " + data[i].separator;
         }
@@ -194,10 +201,11 @@ function displayMilestoneList(data) {
         txt = txt.replace("undefined", "");
         return txt;
     }
-    return "&nbsp;";
-}
+    return "&nbsp;";}
 
-function displayAppMilestoneList(data){
+
+
+function displayAppMilestoneList(data) {
     if (data.length == 0) {
         return "";
     }
@@ -205,8 +213,15 @@ function displayAppMilestoneList(data){
     var txt = "";
     var i;
     for (i = 0; i < data.length; i++) {
-        txt += "<tr><td>" + (data[i].application_milestone) + "</td>";
-        txt += "<td>" + formatedDate(data[i].milestone_date);
+        var str = data[i].application_milestone;
+        if (str.startsWith("<b>") || str.startsWith("<strong>")) {
+            txt += "<tr class='active'><td>" + (data[i].application_milestone) + "</td>";
+            txt += "<td>" + formatedDate(data[i].milestone_date);            
+        }
+        else {
+            txt += "<tr><td>" + (data[i].application_milestone) + "</td>";
+            txt += "<td>" + formatedDate(data[i].milestone_date);           
+        }
         if ($.trim(data[i].separator) != '') {
             txt += " " + data1[i].separator;
         }
@@ -339,6 +354,18 @@ function changeRDSTitle(name, lang) {
     else {
         document.title = "Sommaire de décision réglementaire - " + name + " - Santé Canada";
     }
+
+}
+
+function openAll() {
+    var x = document.getElementsByTagName("details");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].setAttribute("open", "true");
+    }
+}
+
+function shade() {
 
 }
 
