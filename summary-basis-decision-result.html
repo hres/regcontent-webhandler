@@ -361,10 +361,17 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                                 { "data": "med_ingredient" },
                                 { "data": "manufacturer" },
                                 {
-                                    "data": "date_issued",
-                                    "render": function (data, type, full, meta) {
-                                        return formatedDate(data);
-                                    }
+                                   
+                                        "data": null,
+                                        "render": function (data, type, full, meta) {
+                                            if (data.date_authorization == null) {
+                                                return formatedDate(data.date_issued);                                                
+                                            }
+                                            else {
+                                                return formatedDate(data.date_authorization);                                                
+                                            }
+                                            
+                                             }
                                 }
                                 
                 ]
