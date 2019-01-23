@@ -25,7 +25,7 @@ namespace dhpr
         public string medical_ingredient { get; set; }
         public string therapeutic_area { get; set; }
         public string purpose { get; set; }
-        public string reason_decision { get; set; }      
+        public string reason_decision { get; set; }
         public string decision { get; set; }
         public string decision_descr { get; set; }
         public DateTime? date_decision { get; set; }
@@ -96,8 +96,8 @@ namespace dhpr
         public string safety_issue { get; set; }
         public string issue { get; set; }
         public string background { get; set; }
-        public string objective { get; set; }        
-        public string key_findings { get; set; }  
+        public string objective { get; set; }
+        public string key_findings { get; set; }
         public string additional { get; set; }
         public string full_review { get; set; }
         public string sr_references { get; set; }
@@ -111,7 +111,7 @@ namespace dhpr
         public List<BulletPoint> conclusion_list { get; set; }
         public List<BulletPoint> key_message_list { get; set; }
         public List<BulletPoint> use_canada_list { get; set; }
-        public List<BulletPoint> finding_list { get; set; }        
+        public List<BulletPoint> finding_list { get; set; }
         public string overview { get; set; }
         public List<BulletPoint> footnotes_list { get; set; }
         public List<BulletPoint> reference_list { get; set; }
@@ -134,10 +134,11 @@ namespace dhpr
     public class sbdSearchItem
     {
         public string link_id { get; set; }
-        public string brand_name { get; set; }       
+        public string brand_name { get; set; }
         public string med_ingredient { get; set; }
         public string manufacturer { get; set; }
         public DateTime? date_issued { get; set; }
+        public DateTime? date_authorization { get; set; }
         public int template { get; set; }
         public string licence_number { get; set; }
         public bool is_md { get; set; }
@@ -150,8 +151,8 @@ namespace dhpr
     {
         public string link_id { get; set; }
         public string template { get; set; }
-        public string brand_name { get; set; } 
-        public string manufacturer { get; set; }               
+        public string brand_name { get; set; }
+        public string manufacturer { get; set; }
         public string control_number { get; set; }
         public DateTime? date_issued { get; set; }
         public string sub_type_number { get; set; }
@@ -268,7 +269,7 @@ namespace dhpr
     }
 
     public class PostAuthActivity
-    { 
+    {
         public string link_id { get; set; }
         public DateTime? date_submit { get; set; }
         public DateTime? decision_start_date { get; set; }
@@ -320,5 +321,5 @@ namespace dhpr
         public string thera_class { get; set; }
         public string nonmed_ingredient { get; set; }
 
-    }  
+    }
 }
