@@ -338,8 +338,8 @@ namespace dhpr
             var filteredList = new List<sbdSearchItem>();
             var json = string.Empty;
             var sbdJsonUrl = ConfigurationManager.AppSettings["sbdJsonUrl"].ToString();
-            //ServicePointManager.Expect100Continue = true;
-            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
                 using (var webClient = new System.Net.WebClient())

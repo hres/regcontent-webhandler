@@ -56,7 +56,7 @@
 <body vocab="http://schema.org/" typeof="WebPage" class="secondary">
     <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
     <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer1' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer1', 'GTM-TLGQ9K');</script>
     <!-- End Google Tag Manager -->
     <ul id="wb-tphp">
         <li class="wb-slc">
@@ -94,10 +94,10 @@
                     <form action="http://recherche-search.gc.ca/rGs/s_r?#wb-land" method="get" name="cse-search-box" role="search" class="form-inline">
                         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
                         <script type="text/javascript">
-var autoCompletionOptions = { 'validLanguages' : 'en', };
-		google.load( 'search', '1');
-		google.setOnLoadCallback( function() {google.search.CustomSearchControl.attachAutoCompletionWithOptions( '008724028898028201144:knjjdikrhq0', document.getElementById( 'wb-srch-q' ), 'cse-search-box', autoCompletionOptions );});
-		google.setOnLoadCallback( function() {setTimeout( function(){google.search.CustomSearchControl.attachAutoCompletionWithOptions( '008724028898028201144:knjjdikrhq0', document.getElementById( 'wb-srch-q-imprt' ), 'cse-search-box',autoCompletionOptions );}, 2000);});</script>
+                            var autoCompletionOptions = { 'validLanguages': 'en', };
+                            google.load('search', '1');
+                            google.setOnLoadCallback(function () { google.search.CustomSearchControl.attachAutoCompletionWithOptions('008724028898028201144:knjjdikrhq0', document.getElementById('wb-srch-q'), 'cse-search-box', autoCompletionOptions); });
+                            google.setOnLoadCallback(function () { setTimeout(function () { google.search.CustomSearchControl.attachAutoCompletionWithOptions('008724028898028201144:knjjdikrhq0', document.getElementById('wb-srch-q-imprt'), 'cse-search-box', autoCompletionOptions); }, 2000); });</script>
                         <div class="form-group">
                             <label for="wb-srch-q" class="wb-inv">Search website</label>
                             <input name="cdn" value="canada" type="hidden" />
@@ -151,6 +151,9 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
     <div class="container">
         <main role="main" property="mainContentOfPage" class="container">
             <h1 property="name" id="wb-cont">Summary Basis of Decision - <span id="BrandnameTitle"></span> - Health Canada</h1>
+            <div class="row mrgn-tp-md mrgn-lft-sm mrgn-bttm-md">
+                <button class="btn btn-default" onclick="openAll()">Expand all</button>
+            </div>
             <section>
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -164,8 +167,8 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                         <details class="margin-top-medium" open>
                             <summary class="well well-sm"><span id="Brandname2"></span></summary>
                             <!--<div><p><strong id="TombstoneList"></strong></p></div>-->
-                            <div><p><strong id="summary_drug"></strong></p></div> 
-                            <div><p><strong id="Manufacturer"></strong></p></div>                           
+                            <div><p><strong id="summary_drug"></strong></p></div>
+                            <div><p><strong id="Manufacturer"></strong></p></div>
                             <div class="row">
                                 <p class="col-sm-4"><strong>Submission control no:</strong></p>
                                 <div class="col-sm-8"><p id="ControlNum"></p></div>
@@ -174,7 +177,7 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                                 <p class="col-sm-4"><strong>Date issued:</strong></p>
                                 <div class="col-sm-8"><p id="DateIssued"></p></div>
                             </div>
-                            <div id="branchInfoTitle"><p id="branch_info"></p></div>      
+                            <div id="branchInfoTitle"><p id="branch_info"></p></div>
                         </details>
                         <details class="margin-top-medium">
                             <summary class="well well-sm">Foreword</summary>
@@ -239,12 +242,12 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                                 <p class="col-sm-4"><strong>Date of authorization:</strong></p>
                                 <div class="col-sm-8"><p id="DateAuthorization"></p></div>
                             </div>
-                            <div id="trademarkTitle"><p id="trademark"></p></div>  
+                            <div id="trademarkTitle"><p id="trademark"></p></div>
                         </details>
                         <details class="margin-top-medium">
                             <summary class="well well-sm">2 Notice of decision</summary>
                             <p id="NoticeDecision"></p>
-                       </details>
+                        </details>
                         <details class="margin-top-medium">
                             <summary class="well well-sm">3 Scientific and Regulatory Basis for Decision</summary>
                             <p id="SciRegDecision"></p>
@@ -264,7 +267,7 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                                 <summary class="well well-sm">3.4 Benefit/Risk Assessment and Recommendation</summary>
                                 <p id="BenefitRisk"></p>
                             </details>
-                        </details>                        
+                        </details>
                         <details class="margin-top-medium">
                             <summary class="well well-sm">4 Submission Milestones</summary>
                             <p class="mrgn-tp-md"><strong>Submission Milestones:&nbsp;<span id="Brandname5"></span></strong></p>
@@ -280,7 +283,7 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                                 </table>
                             </div>
 
-                     </details>   
+                        </details>
                     </div>
                 </div>
             </section>
@@ -288,7 +291,7 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                 <div class="col-sm-5 col-xs-12 datemod">
                     <dl id="wb-dtmd">
                         <dt>Date modified:&#32;</dt>
-                        <dd><time property="dateModified">2016-10-11</time></dd>
+                        <dd><time property="dateModified">2018-12-31</time></dd>
                     </dl>
                 </div>
                 <div class="clear visible-xs"></div>
@@ -301,7 +304,7 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
                 <div class="clear visible-xs"></div>
             </div>
         </main>
-    </div>  
+    </div>
     <aside class="gc-nttvs container">
         <h2>Government of Canada activities and initiatives</h2>
         <div id="gcwb_prts" class="wb-eqht row" data-ajax-replace="//cdn.canada.ca/gcweb-cdn-live/features/features-en.html"><p class="mrgn-lft-md"><a href="http://www.canada.ca/activities.html">Access Government of Canada activities and initiatives</a></p> </div>
@@ -401,100 +404,100 @@ var autoCompletionOptions = { 'validLanguages' : 'en', };
     <script src="./js/jquery.xdomainrequest.min.js"></script>
     <!--<![endif]-->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-90626095-1', 'auto');
         ga('send', 'pageview');
     </script>
     <script>
         var lang = "en";
         var pType = "sbd";
-        $("a#langLink").attr('href', goDhprLangUrlByID(lang,pType,'sommaire-motif-decision-detailOne') );
+        $("a#langLink").attr('href', goDhprLangUrlByID(lang, pType, 'sommaire-motif-decision-detailOne'));
 
-         $.getJSON(goDhprUrlByID(lang, pType), function (data) {
-             if ($.trim(data.link_id) == '') {
-                 OnFail("");
-             }
-             else {
-                 changeSBDTitle(data.brand_name, lang);
-                 $('#BrandnameTitle').append(data.brand_name);
-                 $('#Brandname').append(data.brand_name);
-                 $('#Brandname2').append(data.brand_name);
-                 $('#Brandname3').append(data.brand_name);
-                 $('#Brandname5').append(data.brand_name);
-                 $('#MedIngredient').append(formatedMedIngredientDesc(data.med_ingredient, data.strength, data.dosage_form));
-                 //$('#TombstoneList').append(formatedTombstoneList(data.tombstone_list));
-                 $('#Manufacturer').append(data.manufacturer);                 
-                 $('#Manufacturer2').append(data.manufacturer);
-                 $('#ControlNum').append(data.control_number);
-                 $('#DateIssued').append(formatedDate(data.date_issued));               
-                 $('#DinList').append(formatedList(data.din_list));               
-                 $('#SubTypeNum').append(data.sub_type_number);
-                 $('#DateSubmission').append(formatedDate(data.date_submission));
-                 $('#DateAuthorization').append(formatedDate(data.date_authorization));
-                 $('#NoticeDecision').append(data.notice_decision);
-                 $('#QualityBasis').append(data.quality_basis);
-                 $('#SciRegDecision').append(data.sci_reg_decision);
-                 $('#BenefitRisk').append(data.benefit_risk);
-                 $('#NonclinBasis').append(formatedClinBasisDesc(data.non_clin_basis, data.non_clin_basis2, ""));
-                 $('#ClinBasis').append(formatedClinBasisDesc(data.clin_basis, data.clin_basis2, data.clin_basis3));
-                 $('#MilestoneTable').append(displayMilestoneList(data.milestone_list));
-                 $('#Contact').append(data.contact);
-                 $('#summary_drug').append(data.summary_drug);
-                 //console.log(data.tombstone_list.length);
-                 //console.log(data.summary_drug);
-                 if (data.tombstone_list.length > 0)
-                 {
-                     var medIngredient = "";
-                     var nonpropName = "";
-                     var strength = "";
-                     var dosageform = "";
-                     var routeAdmin = "";
-                     var theraClass = "";
-                     var nonmedIngredient = "";                    
+        $.getJSON(goDhprUrlByID(lang, pType), function (data) {
+            if ($.trim(data.link_id) == '') {
+                OnFail("");
+            }
+            else {
+                changeSBDTitle(data.brand_name, lang);
+                $('#BrandnameTitle').append(data.brand_name);
+                $('#Brandname').append(data.brand_name);
+                $('#Brandname2').append(data.brand_name);
+                $('#Brandname3').append(data.brand_name);
+                $('#Brandname5').append(data.brand_name);
+                $('#MedIngredient').append(formatedMedIngredientDesc(data.med_ingredient, data.strength, data.dosage_form));
+                //$('#TombstoneList').append(formatedTombstoneList(data.tombstone_list));
+                $('#Manufacturer').append(data.manufacturer);
+                $('#Manufacturer2').append(data.manufacturer);
+                $('#ControlNum').append(data.control_number);
+                $('#DateIssued').append(formatedDate(data.date_issued));
+                $('#DinList').append(formatedList(data.din_list));
+                $('#SubTypeNum').append(data.sub_type_number);
+                $('#DateSubmission').append(formatedDate(data.date_submission));
+                $('#DateAuthorization').append(formatedDate(data.date_authorization));
+                $('#NoticeDecision').append(data.notice_decision);
+                $('#QualityBasis').append(data.quality_basis);
+                $('#SciRegDecision').append(data.sci_reg_decision);
+                $('#BenefitRisk').append(data.benefit_risk);
+                $('#NonclinBasis').append(formatedClinBasisDesc(data.non_clin_basis, data.non_clin_basis2, ""));
+                $('#ClinBasis').append(formatedClinBasisDesc(data.clin_basis, data.clin_basis2, data.clin_basis3));
+                $('#MilestoneTable').append(displayMilestoneList(data.milestone_list));
+                $('#Contact').append(data.contact);
+                $('#summary_drug').append(data.summary_drug);
+                //console.log(data.tombstone_list.length);
+                //console.log(data.summary_drug);
+                if (data.tombstone_list.length > 0) {
+                    var medIngredient = "";
+                    var nonpropName = "";
+                    var strength = "";
+                    var dosageform = "";
+                    var routeAdmin = "";
+                    var theraClass = "";
+                    var nonmedIngredient = "";
 
-                     for (i = 0; i < data.tombstone_list.length; i++) {
-                         medIngredient += data.tombstone_list[i].med_ingredient + ";";
-                         nonpropName += data.tombstone_list[i].nonprop_name + ";";
-                         strength += data.tombstone_list[i].strength + ";";
-                         dosageform += data.tombstone_list[i].dosageform + ";";
-                         routeAdmin += data.tombstone_list[i].route_admin + ";";
-                         theraClass += data.tombstone_list[i].thera_class+ ";";
-                         nonmedIngredient += data.tombstone_list[i].nonmed_ingredient + ";";
-                     }
-                     $('#MedIngredient2').append(medIngredient.slice(0, -1));
-                     $('#NonpropName').append(nonpropName.slice(0, -1));
-                     $('#Strength').append(strength.slice(0, -1));
-                     $('#Dosageform').append(dosageform.slice(0, -1));
-                     $('#RouteAdmin').append(routeAdmin.slice(0, -1));
-                     $('#TheraClass').append(theraClass.slice(0, -1));
-                     $('#NonmedIngredient').append(nonmedIngredient.slice(0, -1));
-                 }
+                    for (i = 0; i < data.tombstone_list.length; i++) {
+                        medIngredient += data.tombstone_list[i].med_ingredient + ";";
+                        nonpropName += data.tombstone_list[i].nonprop_name + ";";
+                        strength += data.tombstone_list[i].strength + ";";
+                        dosageform += data.tombstone_list[i].dosageform + ";";
+                        routeAdmin += data.tombstone_list[i].route_admin + ";";
+                        theraClass += data.tombstone_list[i].thera_class + ";";
+                        nonmedIngredient += data.tombstone_list[i].nonmed_ingredient + ";";
+                    }
+                    $('#MedIngredient2').append(medIngredient.slice(0, -1));
+                    $('#NonpropName').append(nonpropName.slice(0, -1));
+                    $('#Strength').append(strength.slice(0, -1));
+                    $('#Dosageform').append(dosageform.slice(0, -1));
+                    $('#RouteAdmin').append(routeAdmin.slice(0, -1));
+                    $('#TheraClass').append(theraClass.slice(0, -1));
+                    $('#NonmedIngredient').append(nonmedIngredient.slice(0, -1));
+                }
 
-                 if ($.trim(data.branch_info) == '') {
-                     $('#branchInfoTitle').hide();
-                 }
-                 else {
-                     $('#branchInfoTitle').show();
-                     $('#branch_info').append(data.branch_info);
-                 }
+                if ($.trim(data.branch_info) == '') {
+                    $('#branchInfoTitle').hide();
+                }
+                else {
+                    $('#branchInfoTitle').show();
+                    $('#branch_info').append(data.branch_info);
+                }
 
-                 if ($.trim(data.trademark) == '') {
-                     $('#trademarkTitle').hide();
-                 }
-                 else {
-                     $('#trademarkTitle').show();
-                     $('#trademark').append(data.trademark);
-                 }
+                if ($.trim(data.trademark) == '') {
+                    $('#trademarkTitle').hide();
+                }
+                else {
+                    $('#trademarkTitle').show();
+                    $('#trademark').append(data.trademark);
+                }
 
 
-             }
-         });
-        
+            }
+        });
 
-         window.addEventListener('hashchange', openTarget);
-         openTarget();
+
+        window.addEventListener('hashchange', openTarget);
+        openTarget();
     </script>
 </body>
 </html>
