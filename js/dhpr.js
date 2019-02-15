@@ -180,7 +180,7 @@ function displayMilestoneList(data) {
     var i;
     for (i = 0; i < data.length; i++) {
         var str = data[i].milestone;
-        if (str.startsWith("<b>") || str.startsWith("<strong>")) {
+        if (str.indexOf("<b>")==0 || str.indexOf("<strong>") == 0) {
             txt += "<tr class='active'><td>" + (data[i].milestone) + "</td>";
             txt += "<td>" + formatedDate(data[i].completed_date);
         }
@@ -214,7 +214,7 @@ function displayAppMilestoneList(data) {
     var i;
     for (i = 0; i < data.length; i++) {
         var str = data[i].application_milestone;
-        if (str.startsWith("<b>") || str.startsWith("<strong>")) {
+        if (str.indexOf("<b>") == 0 || str.indexOf("<strong>")==0) {
             txt += "<tr class='active'><td>" + (data[i].application_milestone) + "</td>";
             txt += "<td>" + formatedDate(data[i].milestone_date);            
         }
